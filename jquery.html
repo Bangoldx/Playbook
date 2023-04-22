@@ -1,0 +1,73 @@
+<!DOCTYPE html>  
+          <html lang="en">
+            <head>
+              <meta charset="UTF-8">
+              <title>My Website</title>
+            </head>
+            <body>
+                <h1>jQuery</h1>
+  <p>
+    jQuery is a javascript is a precompiled library meant to make our lives easier by requiring less typing. It is, in
+    fact, very similar to how Bootstrap shortens certain CSS where once its linked to your HTML file you can use
+    shorthand scripts to do things. Where a normal JS query requires document.querySelector("h1"), jQuery shortens it to
+    jQuery("h1"), or even shorter still... $("h1"). Also like Bootstrap you can link the CDN to your HTML file which can
+    be found <a href="https://developers.google.com/speed/libraries#jquery">here</a>
+  </p>
+
+  <h4>jQuery Manipulation</h4>
+  <p>
+    You can manipulate CSS elements using the .css method followed by the property you want to change and the value of
+    the property. If you only put in the property inside the method it will allow you to find the current value. So,
+  <p>$("h1").css("color","red");</p>
+  will change the color of ALL h1 elements to red, and
+  <p>console.log$("h1").css("color");</p>
+
+  will give you the current value of the color property of the h1 element. So anytime that you only have one input, you
+  are getting the value of that input and anytime that you have two inputs you are setting a new value. While you
+  <em>CAN</em> change the style this way, its not recommended as you'd want to keep your concerns seperated. You can add
+  and remove different styles using jQuery kind of like you would in JS but a little more simplified. You add/remove
+  classes with .addClass(" "); or .removeClass(" "); after the element that you're trying to change and have the style
+  class built out within your styles.css file. You can add multiple CSS classes to you jQuery code, and you do this by
+  adding in the first class you want to access followed by the second seperated by a space, all within the same
+  quotations. ("firstClass secondClass".</p>
+  <p>
+    You can changed the text within an element using jQuery using .text, and since the $ automatically select all of
+    that element, all will change. Instead of innerHTML like we would use in JS you can just use .html and this will
+    also add html to the element where if we were to try adding html using the .text method it would read any html
+    simply as text and add it directly to the element.
+  </p>
+  <p>
+    Changing different attributes is just as easy with jQuery, use the <strong>.attr</strong> method. Lets say that you
+    wanted to change an image, you would select the img tag and then .attr and your first input is going to be the name
+    of the attribute that we want and if there is a second input that is what we are going to change the attribute to.
+    $(img).attr("src", "drum2.png").
+  </p>
+
+  <h4>Event Listeners</h4>
+  <p>
+
+  </p>
+  <h4>Add/Remove Elements</h4>
+  <p>
+    before() adds the new element before the opening tag of the queried element. after() adds the new element after the
+    closing tag of the queried element. prepend() adds the new element just before the the content of the queried
+    element. append() adds the new element just after the content of the queried element.</p>
+  <p>
+    Getting rid of elements is just as easy, you query the element and use .remove() and this will remove all that
+    element.
+  </p>
+
+  <h4> jQuery Animations</h4>
+  <p>
+    .hide .show .toggle .fadeOut .fadeIn, .fadeToggle .slideUp .slideDown .slidToggle .animate({opacity:0.5}), with
+    animate you can only add the css rules that have a numeric value. You can chain animations together using the dot
+    notation
+  </p>
+
+
+              
+            </body>
+            <footer>
+                
+            </footer>
+        </html>

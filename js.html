@@ -1,0 +1,369 @@
+<!DOCTYPE html>  
+          <html lang="en">
+            <head>
+              <meta charset="UTF-8">
+              <title>My Website</title>
+            </head>
+            <body>
+                <div id="js-info">
+                    <hr>
+                    <h1>Javascript</h1>
+                    <p>
+                      Javascript is what gives your website functionallity. Without it, sites like youtube and netflix will not even
+                      load. Any ad you see on a site is created using javascript and can be removed by removing javascript viewing in
+                      your browser but that will also remove a whole other chunk of funtions from the site as well. adding a pop up into
+                      your site is written as <strong><em>alert("Hello"); </strong></em> where the "alert" is the function, followed by
+                      parentheses("and the message you want displayed within quotes inside the parentheses") and closed off with a ;.
+                    </p>
+                
+                    <h3>Data Types</h3>
+                
+                    <p>
+                    <h4>Strings</h4>
+                    A <strong>String</strong> is what is betwen the quotation marks. This allows the computer to know what needs to be
+                    displayed. You can find out the total length of a string or var value with varName.length. You can also change the
+                    text casing of a string using either varName.toUpperCase or varName.toLowerCase, and this can be combined with var
+                    slicing.
+                    </p>
+                
+                    <h4>Numbers</h4>
+                    <p>
+                      You can add or subtract in JS simply using + or -, you can multiply with * and divide with /. And then there is
+                      <strong>Modulo</strong> which gives you the remainder of a divised number. This is done using %. So 9 % 6 = 3
+                      since 6 goes in to 9 once and the remainder is what is left over, which is 3. Mathmatically precidence still hold
+                      true in programming so the normal order of operations will be used. Unlike basic math, programming also uses
+                      increment and decrement expressions. Using <strong>x++</strong> where x=5, x would then equal 6, this is an
+                      increment expression, decrement expressions are the same just with <strong>x--</strong> now x is equal to 4. You
+                      also do this with more than just a single increment/decrement by using x +=2 so x would then equal 7. This can be
+                      done with +, -, *, or /
+                    </p>
+                
+                    <h4>Boolean</h4>
+                    <p>
+                      <strong>Boolean</strong> differentiates <em>True</em> or <em>False</em>
+                    </p>
+                
+                    <h4> Javascript Variables</h4>
+                    <p>
+                      <strong><em> var(keyword) myName(name) = "Andrew"(value);</strong></em>, using the keyword var, you can create a
+                      variable. You can name that var whatever you need to, camelCase is a best practice here so keep that in mind, and
+                      then make that = to whatever you need it to be. Whether that be a string, or a number, or a boolean. Once this var
+                      is created, it can be changed at anytime in the code by simply inputting the var name = theNewValue. You can even
+                      combo var creation with a prompt such as <strong><em>var yourName = prompt("What is your name?";</strong></em>.
+                      Once you have vars in place you can call those in different things like alerts using strings the a "+" and then
+                      the var name, and you can combine those as many times as needed. as long as you have the proper syntax.
+                    </p>
+                
+                    <h4>Naming Coventions</h4>
+                    <p>
+                      There are a few basic rules when it comes to variable names. Give your var meaningful names, it can not be named
+                      var *, can not start with a number, can not include a space *, can only contain: letters, numbers $ and _ *, use
+                      cameCasing. * = will error out and tell you its not valid.
+                    </p>
+                
+                    <h4>Concatenation</h4>
+                    <p>
+                      Concatenation is combining multiple strings into a single output. You do this by adding a "+" between "strings",
+                      so "string " + "string" will output "string string"
+                    </p>
+                
+                    <h4>Slicing</h4>
+                    <p>
+                      <strong><em>varName.slice(0,x)</strong></em>, Slicing allows you to cut off or segment specific chunks of a string
+                      based on its character count. Using varName.slice(0,x) where "0" is the very first character since in programming
+                      all counts start at 0, and "x" is the amount of characters between the first slice and the last. Now, you can
+                      start your slice at any point and end at any point so it could be varName.slice(42,97) and it would start counting
+                      at the 42nd character and stop after the 97th.
+                    </p>
+                
+                    <h3>Functions</h3>
+                    <p>
+                      Funtions are created using <strong><em>function functionName() {}</strong></em> and allows you to save a series of
+                      code instructions so if you have to use the same series of instructions again don't have to rewrite them
+                      everytime. Instead all you'll have to do it "call" the function with functionName();. function is, of course, the
+                      keyword just like var so the computer knows what it needs to do, name it whatever you like within the naming
+                      convention restrictions, <em>see above</em>, and a set of () followed by {Anything inside these curly braces is
+                      going to be the code that your function performs when it is called}. Function curly braces do not need to be
+                      closed with ";" but when calling it functionName(); it does. Functions can also be called within other functions.
+                    </p>
+                
+                    <h4>Calling Functions</h4>
+                    <p>
+                      You call functions simply with functionName();, but can also become more indepth by adding different parameters
+                      within the () when creating the function. So by creating function getMilk(money,costPerBottle) we can specify what
+                      the parameters are when we actually call it. Now this is in combination with other code and functions so on its
+                      own will not run. <em>buuuut</em> using <br>
+                    <p>
+                      function getMilk(money,costPerBottle){<br>
+                      console.log("buy " + calcBottles(money,costPerBottle) + " bottles of milk.");<br>
+                      console.log("here is your $" + calcChange(money,costPerBottle) + " change");<br>
+                      }<br>
+                      <br>
+                      function calcBottles(startingMoney,costPerBottle){<br>
+                      var numberOfBottles = Math.floor(startingMoney / costPerBottle);<br>
+                      return numberOfBottles<br>
+                      }<br>
+                      <br>
+                      function calcChange(startingAmount,costPerBottle){<br>
+                      var change = startingAmount % costPerBottle;<br>
+                      return change <br>
+                      }<br>
+                      getMilk(5,1.5);
+                    </p>
+                    We are able to call the returned outputs using the functions we created with the equations within the "string" that
+                    we are logging to the console, so that with the parameters givin of (5,1.5) when calling the primary function it
+                    would give the result of <em>buy 3 bottles of milk. here is your $0.5 change</em>. Understanding that I was needing
+                    to create a function/equation just to get the output <strong>just</strong> to be able to use it in a seperate
+                    function made so angry until it click. I was returning a value with the <strong>return</strong> keyword within the
+                    function to use within my main function.
+                    </p>
+                    <h4>Randomness</h4>
+                    <p>
+                      True randomness is impossible with a computer, it's just simply not built to allow it. We can however create the
+                      <em>illusion</em> of randomness. Using <strong><em>Math.random();</strong></em> we can create a random number
+                      within 16 decimile points from 0-0.9999999999999999 but never reaching 1. You can modify this by multiplying it by
+                      anynumber. You can also round to the floor or just simply round.
+                    </p>
+                    <h4>If/Else statements and Comparators/Equality</h4>
+                    <p>
+                      You can have your code do "if's" or "else's" by using the if and else keywords. So use <em>if(argument goes here
+                        // comparator){ do this line of code}</em>
+                      else{ do this line of code}
+                      <br>
+                      <strong>
+                        Is equal to(===)<br>
+                        Is not equal to(!==)<br>
+                        Is greater than(>)<br>
+                        Is Lesser than(<)<br>
+                          Is greater or equal to(>=)<br>
+                          Is lesser or equal to(<=)<br>
+                      </strong><br>
+                      "else if" is another comparator that will allow you to
+                
+                      <hr>
+                      
+                      <hr>
+                
+                    <h4>Combining Comparators</h4>
+                    && AND<br>
+                    || OR<br>
+                    ! NOT<br>
+                    </p>
+                    <h4>Collections and JS Arrays</h4>
+                    <p>
+                      An array is basically a collection of data points with a []. You create a var equalling the array with the data
+                      inside the [] seperated by commas. You can pull specific points by calling the numbered position within the array,
+                      remember the first piece of data is 0. You can also check to see if a specific piece of data is included using
+                      arrayName.includes(), you can combine this with prompts and alerts . <br>
+                
+                    <p>
+                      var guestList = ["Drew", "Jared", "Brent", "Stanze", "Shaunta", "Christian"];<br>
+                      var guestName = prompt("What is your name?")<br>
+                      if (guestList.includes(guestName)){
+                      alert ("Welcome to the party " + guestName + "!");<br>
+                      } else{<br>
+                      alert("Get lost loser!")<br>
+                      }
+                    </p>
+                
+                    <strong> Push and Pop your arrays</strong> using arrayName.push() or arrayName.pop() and what ever you put in the
+                    parenthesis, which could be another var if needed.
+                    </p>
+                    <h4>LOOPS</h4>
+                    <p>
+                      <strong><em>"While Loops"</strong></em> lets you give the code to do a certain set of code as long as the stop
+                      critera is not met. Such as while(count <= 100){}, this says while the var count is less than or equal to 100 do
+                        {this code} and it will continue this loop until it reaches a <em>false</em> statement. Which also makes it
+                        prone to errors and infinite loops that will cause you browser to "hang" and crash. Example of code commented
+                        out in this code below.<br>
+                        <!--     var output = [];
+                    var count = 1;
+                
+                    function fizzBuzz() {
+                
+                    while(count <= 100){
+                
+                    if (count % 3 === 0 && count % 5 === 0){
+                        output.push("FizzBuzz");
+                    } else if (count % 3 === 0){
+                        output.push("Fizz");
+                    } else if (count % 5 === 0){
+                        output.push("Buzz");
+                    } else {
+                        output.push(count);
+                    }
+                    count++;
+                    }
+                    console.log(output);
+                } -->
+                    </p>
+                    <strong>for loops</strong>
+                    <p>
+                      for (i=0 "this is the start"; i<2 "this is the end" ; i++ "this is what we are changing each loop" ){do something}
+                        var creation takes takes place within the for loop as the starting point, fizzbuzz example in code below. <!--
+                        var output=[]; function fizzBuzz() { for(var count=1; count < 101; count++){ if (count % 3===0 && count %
+                        5===0){ output.push("FizzBuzz"); } else if (count % 3===0){ output.push("Fizz"); } else if (count % 5===0){
+                        output.push("Buzz"); } else { output.push(count); } } console.log(output); } -->
+                        This is the most preferred looping method. <strong>While loops</strong> are to check states, and <strong>for
+                          loops</strong> are used to iterate
+                    </p>
+                    <!--     function fibonacciGenerator (n){
+                    
+                    var output = [];
+                    if (n === 1){
+                        output = [0];
+                    }
+                    else if (n === 2) {
+                        output = [0, 1];
+                    }
+                    else {
+                        output = [0,1];
+                
+                        for (var i = 2; i < n; i++){
+                            output.push(output[output.length-2] + output[output.length - 1]);
+                        }
+                    }
+                
+                    return output;
+                    
+                } -->
+                
+                    <hr>
+                    
+                    <hr>
+                
+                    <h1>DOM(Document Object Model)</h1>
+                    <h4>Adding JS to Websites</h4>
+                    <p>
+                      You can add JS to websites very simarly to CSS and add it <em>inline</em> to the element. <strong>onload</strong>
+                      tells the browser that when the element loads do "x". So
+                
+                      <body onload="alert(" Hello")"> Would create an alert stating "hello" when the body is loaded. However because the
+                        alert command has to be inside of quotations and the string that we are trying to use does as well the browser
+                        reads "alert(" and ")" as string and Hello as code. You rectify this by instead using single quotes
+                        "alert('Hello')". Avoid inline JS if possible. <strong>Internal JS</strong> is created using the < script> tag.
+                          < strong > External JS</strong > is just like external CSS and is done using < script src = "" charset = utf - 8 >
+                            < /script>. Placement of the script tag is VERY important, as a best practice is to put the script tag at
+                              the very end.
+                    </p>
+                    <h4>Using the DOM</h4>
+                    <p>
+                      The DOM allows you to pick and chose parts of your HTML files and change it on the fly. It reads your HTML
+                      document as a tree structure and seperates each element as its own branch. At the top of the tree is the document,
+                      then the HTML element, then the head and the body. This will continue for as many different elements that you have
+                      inside your doc. You can select your tree's branches by using document.firstElementChild would select the HTML
+                      element, and you can continue this for any child within any element'. document.querySelector(" ") will search
+                      through your entire document looking for what is put within the quotations. then using the "dot notation ." and
+                      you give it a method. Objects within the DOM can have Properties and Methods properties describe the object and
+                      methods define things the element can do. <strong>Get Property</strong> car.color; would output the property color
+                      of the element. <strong>Set Property</strong> allows you to change the property itself. So car.numberOfDoors = 0;
+                      would then make it so that the car element has no doors.
+                    </p>
+                    <h4>Selecting HTML Elements with JS</h4>
+                    <p>
+                      You can use querySelector("") to select a single specific item wtih JS. Using querySelector you can combine
+                      elements, classes and IDs just like you would with CSS. Now if you were wanting to select all the items that have
+                      the element or class name, you would use querySelectorAll(""). This will then put all the items into an array. You
+                      can also use getElementsByTagName("");. This will collect all elements with that tag and add them to an array. You
+                      can select an item out of that array with document.getElementsByTagName("li")[2], which will select the 3rd item
+                      in the array since arrays start at 0, then using the dot notation tell it what to do. So,
+                      document.getElementsByTagName("li")[2].style.color = "purple"; would change the third li to purple.
+                      getElementsByClassName("") and getElementById(""), the big difference between the tagName, className and the Id is
+                      that element is singular in the Id. Because of course IDs are unique and can on be used once in a single HTML
+                      file.
+                    </p>
+                
+                    <h4>Manipulation of Stlyes Using JS</h4>
+                    <p>
+                      You can manipulate styles using JS. First you would select the element you're wanting to change, then use
+                      style.whatPartYouWantToChange = "". The style keywords in JS are almost identical to those in CSS, with the key
+                      difference being that instead of the words being seperated with a -, they are camelCased. So the first letter of
+                      the first word is lower and then any later words will have their first letter capitalized. such as,
+                      document.querySelector(".btn").style.backgroundColor = "yellow";.
+                    </p>
+                
+                    <h4>Seperation of Concerns</h4>
+                    <p>
+                      HTML is for content only, CSS is to style your site, and JS is for behaviour. <strong>classList</strong> lets you
+                      see all the classes within the selected element, using classList you can also add, remove, and toggle new classes
+                      into your code. If you already have the CSS styles for those classes, the style will automatically be applied.
+                      Just ensure that your query item is in " " as well as the class you are effecting.
+                    </p>
+                
+                    <h4>Text Manipulation</h4>
+                    <p>
+                      You can change the text of your HTML doc with JS by using the .innerHTML tag. This will print anything within the
+                      selected element, including any other HTML tags that may be included. If you just want the text, you would use
+                      .textContent instead, this will only pull the actually text and not any HTML elements.<br>
+                      You can view and change any attribute using JS as well, using .attributes You will get a list of all attributes
+                      within your selected element. You can .getAttribute("") to get what the content of the attribute is, and you can
+                      even .setAttribute(" ", " ")
+                    </p>
+                
+                    <h4> Advanced JS and DOM Manipulation</h4>
+                    <p>
+                      Event Listener .addEventListener(type, listener"which is a function you have created to handle the event, );
+                      <strong>Higher Order Functions</strong> which refers to the function that takes functions as inputs.
+                
+                      <strong>Callback Functions</strong>
+                
+                      A method is just a function that is associated with an object
+                      <strong><em>This</strong></em> allows you to find the identity of the event listener that it active.
+                    </p >
+                    <p>
+                
+                      <strong>Adding Audio</strong> You add audio using the following code, var audio = new Audio('sounds/tom-1.mp3')
+                      audio.play();. So you create a new var audio = new Audio, which "new Audio" is already an HTML element that is
+                      prebuilt, followed by the file location and name. Very similar to an image.
+                    </p>
+                    <p>
+                    <h4>Constructor Functions</h4> These are functions that act kind of like a factory. You can create it very similarly
+                    to any other function bt with some tweak. So basically<br>
+                    function HouseKeeper "the function name must have each word capitalized, ignoring the camelCase"(peram1, peram2,
+                    peram3){<br>
+                    this.peram1 = peram1<br>
+                    this.peram2 = peram2<br>
+                    this.peram3 = peram3<br>
+                    }<br>
+                    And you would call this function with <br>
+                    var houseKeeper1 "camelCase back in play" = HouseKeeper(peram1, peram2, peram3);<br>
+                    This is going to create the var houseKeeper1 with the perameters given without having to write out each FULL new var
+                    with all the different perameters/arguments each time.
+                    </p>
+                
+                    <h4>Switch</h4>
+                    <p>
+                      A switch will take the code in a different direction based on different variables, So you first create the var
+                      that is going to be its basis. After you create the var, it goes in the "key" portion of the switch skeleton. The
+                      case is next and that is going to corralate with the var you created, such if the var create was var =
+                      buttonInnerHTML = this.innerHTML,<em>which as we know "innerHTML" is JS code to pull text from within code</em>,
+                      Your case would be whatever innerHTML you need it to be to trigger the event listener. Case is built a lot like a
+                      function, so you could create additional var and give any instruction you need to before the break; which act just
+                      like a ; at the end of a line in a function.
+                    </p>
+                    <p>
+                      switch (key) {<br>
+                      case value:<br>
+                      <br>
+                      break;<br>
+                      <br>
+                      default:<br>
+                      break;<br>
+                      }
+                    </p>
+                
+                    <h4>Animations</h4>
+                    <p>
+                      There is a way to create animations with JS. You would use the classList and the add/remove methods in order to
+                      add/remove different styles, but at its base that is just going to change it until the code tell it to change it
+                      to something different. So in order to create an animation, you have to the setTimeout function. This requires two
+                      perameters, the first is going to be the action that gets taken, which can be an annonomous function, followed by
+                      a comma and the amount of time before timeout takes place. So <br>
+                      setTimeout(function(){"your action taken goes here."}, 100);<br>
+                      The number is milliseconds, and 1000 === 1 sec.
+                    </p>
+                  </div>
+                
+              
+            </body>
+        </html>

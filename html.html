@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HMTL</title>
+</head>
+<body>
+    <div id="html-info">
+        <h1>Headers</h1> <br> Headers are created using the h1-h6 tags. Must be opened and closed.
+          <div id="headers">
+            <p>
+            <h1>Heading level 1</h1>
+            <h2>Heading level 2</h2>
+            <h3 id="h3top">Heading level 3</h3>
+            <h4>Heading level 4</h4>
+            <h5>Heading level 5</h5>
+            <h6>Heading level 6</h6>
+            </p>
+          </div>
+          <left>
+    
+            <hr>
+            <h1>Line breaks</h1>
+            <p>You can use <code>br</code> to add spacing. br also does not require closing.</p>
+    
+            <hr>
+            <h1>Horizontal Rule </h1>
+            <p>
+              <code>hr</code> is used to create a horizontal line which can be modified using attribute such as size and
+              shading. Does
+              not require closing.
+            </p>
+    
+            <hr>
+    
+            <br>
+            <h1>HTML Boilerplate </h1>
+            <p>
+            <pre>
+              !DOCTYPE hmtl
+                html lang="en"
+                  head> 
+                    meta charset="UTF-8" 
+                      title My Website /title 
+                          /head
+    
+                            body 
+                             
+    
+                              /body
+                                /html
+              </pre>
+            </p>
+    
+            <!-- <!DOCTYPE html>  
+          <html lang="en">
+            <head>
+              <meta charset="UTF-8">
+              <title>My Website</title>
+            </head>
+            <body>
+              
+              
+            </body>
+        </html> -->
+    
+            <hr>
+    
+            <h1>Nesting</h1>
+    
+            <p>
+              Nesting is the act of keeping lines of code organized into chunks.
+            </p>
+    
+            <hr>
+    
+            <h1> Formatting</h1>
+    
+            <p>To section off chunks of text or paragraphs use the <code>p</code>which will group everything in the opening
+              and
+              closing p and /ptags together.</p>
+    
+            <p>
+              To make things italicized, us <code>em</code> or <em>emphasize</em> instead of intalics <code>i</code> <br>
+                  Same goes for bold, use <strong><code>strong</code></strong> instead of <code>b</code>.
+            </p>
+    
+            <hr>
+            <h1>Lists</h1>
+            <p>You can create bulleted list by using the <codce>ul</codce> tag, unordered list, and you can create numbered listed using
+                the <code>ol</code> tag, ordered list. Then using the <code>li</code> tag, list item, to list then the item.
+            </p>
+            <p>You may also create unordered and ordered lists within the other. i.e <br>
+            <ol>
+              <li>boardgames</li>
+              <li>music</li>
+              <ul>
+                <li>Bass</li>
+                <li>Kalimba</li>
+              </ul>
+            </ol>
+            <hr>
+            <h1> Images</h1>
+            You can add an image to your website by using an image tag <code>img</code> followed by <code>src="" alt="".</code>> Requiring a scr and
+              alt, the alt will display if the img can not and also assist in Google's algorithm for search results. When
+              using the img tag you can either use a direct url to a image found online or you can save an image locally and
+              name it as source. If you have a image folder withing your project you will have to use a direct path such as
+              "images/abcdefg.png"
+              <br>
+              <hr>
+              <h1>Hyperlinks</h1>
+              Hyperlinks are made using anchor tags <code>a</code>. <a href="https://boardgamegeek.com/user/Bangold"> My Boardgame
+                  Collection</a> The link is placed after the attribute <code>a href="https://boardgamegeek.com/user/Bangold"</code>>
+                  The text here is what shows up instead of the link intself. Anchor tags must be closed.
+                  <br>
+                  <hr>
+                  <h1>Tables</h1>
+                  Tables are used to help organize data into rows and colums. Use the <code>table</code> tag to create a table, <code>tr</code> to
+                      create a row, and <code>td</code> to create cells.
+                        <br>
+                        i.e.
+                        <br>
+                        <table cellspacing="7">
+                          <tr>
+                            <td>Drew</tb>
+                            <td>34</td>
+                          </tr>
+                          <tr>
+                            <td>Jared</td>
+                            <td>33</td>
+                        </table>
+                        <br>
+                        You can also add headers <code>thead</code>, boddies <code>tbody</code>, and footers <code>tfoot</code>
+    
+                              <br>
+                              i.e
+                              <p>
+                              <table cellspacing="7">
+                                <thead>
+                                  <tr>
+                                    <th>Name</th>
+                                    <th>Age</th>
+                                  <tr>
+                                    <td>Drew</tb>
+                                    <td>34</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Jared</td>
+                                    <td>33</td>
+                              </table>
+                              </p>
+                              <br>
+    
+                              You may also create a table within a table by nesting the new < table> within the < td>
+    
+                                  <br>
+    
+                                  i.e.
+                                  <table>
+                                    <tr>
+                                      <td>
+                                        <table>
+                                          <tr>
+                                            <td>Management</td>
+                                            <td>⭐⭐⭐⭐</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Fast Learning</td>
+                                            <td>⭐⭐⭐⭐⭐</td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                      <td>
+                                        <table>
+                                          <tr>
+                                            <td>Web Development</td>
+                                            <td>⭐</td>
+                                          </tr>
+                                          <tr>
+                                            <td>HMTL</td>
+                                            <td>⭐⭐</td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                  <br>
+                                  <hr>
+                                  <h1>Forms</h1>
+                                  Forms can be made with the < form> tag. Forms can be outfitted with a multitude of
+                                    attributes including but limited to: Text, calendars, color pickers, submit buttons.
+                                    <p>
+                                    <form action="mailto:bangold@proton.me" method="post" enctype="text/plain">
+                                      <label>Your Name:</label>
+                                      <input type="text" name="yourName" value=""><br>
+                                      <label>Your Email:</label>
+                                      <input type="text" email="yourEmail" value=""><br>
+                                      <label>Your Message:</label><br>
+                                      <textarea name="your Message" rows="10" cols="30"></textarea>
+                                      <input type="submit"><br>
+                                      <input type="color">
+                                    </form>
+                                    </p>
+                                    <br>
+                                    Using < input type="text"> will create a place for the user to input text. <input
+                                        type="text">
+                                      <br>
+                                      Using < label></ label> will allow you to label your text input boxes effectively.
+                                      <br>
+                                      <label>Text goes here👇</label><br>
+                                      <input type="text">
+                                      <br>
+                                      You can make a form perform an action such as Mail To using < form
+                                        action=mailto:bangold@proton.me method="post" enctype="text/plain">
+                                        <br>
+                                        These and more HTML form tags, and all tags found in this playbook, can be found <a
+                                          href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">here</a>
+                                        <br>
+                                        <hr>
+                                        <h1>Site Publishing</h1>
+                                        There are quite a bit of places online that you can host your website, a lot of
+                                        which are paid. You can also use <a href="https://github.com/">Github</a>. Once
+                                        logged in, with all files and folders committed to your main branch, go to settings,
+                                        pages, choose your main branch as the source and hit save. It may take upto 30
+                                        minutes for your page to go live, but can be found at <a
+                                          href="bangoldx.github.io/cv/">"yourUserName".github.io/"repoName"/></a>
+      </div>
+    
+      <hr>
+</body>
+<footer>
+                
+</footer>
+</html>

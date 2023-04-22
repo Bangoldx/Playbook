@@ -1,0 +1,108 @@
+/* color palette #245953 #408E91 #E49393 #D8D8D8 */
+
+/* base elements */
+body {
+    background-color:#245953;
+    line-height:2;
+    font-family:'Montserrat', sans-serif;
+    color:#D8D8D8; 
+    position: relative;
+  }
+  
+  hr {
+    border-style:none;
+    border-top-style:dotted;
+    border-color:purple;
+    border-width:5px;
+    width:15%;
+  }
+  
+  h1, h2, h5, h6 { 
+    color:white;
+    font-family: Merriweather, sans-serif;
+    text-align:center;
+  }
+  
+  h3{
+    color:#E49393;
+  }
+  
+  h4 {
+    color:purple;
+    font-family: Merriweather, sans-serif;
+  }
+  #headers {
+    color:white;
+    text-align:center;
+  }
+  
+  
+  /* divs */
+  
+  .heading{
+    background-color:black;
+    text-align:center;
+  }
+  
+  /* #html-info{
+    
+  } */
+  
+  #css-info{
+    background-color:#408E91;
+  }
+  
+  /* #boostrap-info{
+    
+  }
+  
+  #js-info{
+    
+  } */
+  
+  .top-container {
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    border:solid 15px;
+    padding:px;
+  }
+  
+  .middle-container {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border:solid 10px;
+    margin-left: 70px;
+  }
+  
+  .bottom-container {
+    width: 50px;
+    height: 50px;
+    background-color: blueviolet;
+    border:solid 2px;
+    margin-left:130px;
+  }
+  
+  a {
+      color:#EA8FEA;
+  }
+
+  code{
+    color:black;
+    border: black;
+    border-style: solid;
+    border-width: .5px;
+    background-color:bisque;
+    position: relative;
+  }
+
+  pre {
+    color:black;
+    border: black;
+    border-style: solid;
+    border-width: .5px;
+    margin-right: 1000px;
+    background-color:bisque;
+    position: relative;
+  }
