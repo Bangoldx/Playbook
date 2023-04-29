@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="./images/favicon.ico">
+
+</head>
+
+<body>
+    <h1>APIs - Application Programming Interfaces</h1>
+    <h3> What are APIs?</h3>
+    <p>
+        A set of commands, functions, protocols, and objects that programmers can use to create software or interact
+        with an
+        external system.
+    </p>
+    <h3>API Endpoints, Paths and Parameters</h3>
+    <p>
+        <strong>Endpoints</strong>, every API that interacts with an external system like a server, will have an
+        endpoint.
+        Possibly a URL found within the documentation.
+
+        <strong>Paths</strong> are just that and are included in the end point URL at the end. This tells the browser
+        where
+        in particular it needs to look within the endpoint to find what you are looking for. This can further be
+        expanded on
+        with the inclusion of <strong>Parameters</strong>. Parameters come after the path, proceeded by a "?" which is
+        then
+        followed by a key value pair seperated by a "=". You can have multiple queries inside your parameters and these
+        will
+        be seperated by a "&". The order of your parameters does not matter, you will still receive the same result.
+    </p>
+
+    <h3>Authentication</h3>
+    <p>
+        Authenication is how the API host knows how to either monetize or limit its use. Some even have a limit on how
+        many
+        times it can be called before it limits its output. This is done using an API key, provided by the host.
+        Depending
+        on your needs, they may be free of cost several thousands.
+    </p>
+    <h3>Postman</h3>
+    <p>
+        Postman is a program that helps simplify typing your API request. You can download on linux with snap.
+        Essensintially giving you a "form" to fill out, starting with your endpoint and then gets you entry spots for
+        keys
+        and values and it will build out the full API url for you. Saving you the trouble of having to type everything
+        into
+        your browser.
+    </p>
+    <h3>JSON</h3>
+    <p>
+        Javascript Object Notation
+    </p>
+
+    <h3>Get Request</h3>
+    <p>
+        You use .get to gain access to the api url you are using. Node.js comes standard with the HTTPS module so there
+        is
+        no need to download something external and as such, you can just simply create an https const requiring
+        ("https")
+        and then use https.get. Now using this just like it is,
+        https.get(https://api.openweathermap.org/data/2.5/weather?lat=38.5492&lon=-90.4926&units=imperial&appid={APIKEY}
+        , function(res){}) can be a bit lengthy. So what you can do to help alleviate is create another const url =
+        https://api.openweathermap.org/data/2.5/weather?lat=38.5492&lon=-90.4926&units=imperial&appid={APIKEY} and then
+        your
+        https.get(url) since const(s) act as var(s).
+    </p>
+
+    <p>
+        <strong>.on Method</strong> allows you to get data from the api response. Response.on("data", function(data){}).
+        Just using this will create hexdecimal data that, when converted, will give you real data. However, you can
+        actually
+        pull a js object by parsing JSON. You will want to store the parsed json object inside of a const, so in this
+        current project its, response.on("data", function(data){
+        const weatherData = JSON.parse(data)
+        }) which will effectively unpack and build the data for you. JSON.<strong>stringify?</strong>(data)
+    </p>
+
+</body>
+
+</html>

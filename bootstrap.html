@@ -1,102 +1,108 @@
-<!DOCTYPE html>  
-          <html lang="en">
-            <head>
-              <meta charset="UTF-8">
-              <title>My Website</title>
-            </head>
-            <body>
-                <div class="bootstrap-info">
-                    <h1>Bootstrap</h1>
-                    <p>
-                      <em>A Front-End Library</em>, bootstrap is a precompiled library of styles that can essentially be shortcutted to
-                      style your webpage. Bootstrap and its documentation can be found <a href="https://getbootstrap.com/">here</a>.
-                    </p>
-                
-                    <h3>Bootstrap Installation</h3>
-                    <p>
-                      When you want to use the bootstrap framework, there are a few different ways that you can install it. You can just
-                      use the href link provided in the <strong><em><a
-                            href="https://getbootstrap.com/docs/5.3/getting-started/download">Get Started</a></em></strong>, you can
-                      download and include it in your package manager, or you can download the physical files to point to. The easiest
-                      option is to just use the href link, which is most likely cached on the user's systems already.
-                    </p>
-                    <h3>Workflow</h3>
-                    <p>
-                      One of the first things you should when you start designing a website is to start
-                      <strong><em>wireframing</em></strong>. This is just a low res quick sketch of what you're going to want your site
-                      to look like. You can do this just on a sheet of paper, or download and print templates from <a
-                        href="https://sneakpeekit.com">Sneakpeekit</a> or use an interactive too called <a
-                        href="https://balsamiq.cloud">Balsamiq</a>. After you wireframe your site and establish a design you're going to
-                      create a <strong><em>Mock Up</em></strong>, this is a more detailed and styled nonfunctioning wireframe of your
-                      site. You can do this with photoshop, illustrator or any other photo editing software.
-                    </p>
-                    <h3>Creating a Navigation Bar</h3>
-                    <p>
-                      You can create a navigation bar in bootstrap using the < nav> tag and creating a navbar class, class="navbar".
-                        Then create and unordered list with a class="navbar-nav" and list items with a class="nav-item". You would then
-                        want to create an anchor tag with a class="nav-link" href="" and name your tag with whatever you want it to say
-                        or to point to. You can also use a class="navbar-brand" href="" anchor tag and this will create a "brand" style.
-                        It can be created with multiple elements but it works best with the anchor tag.
-                    </p>
-                    <h4>Navbar Content Positioning</h4>
-                    <p>
-                      You change the positioning of your li by adding in spacing. Inside of your opening ul, you want to add an addition
-                      class after navbar-nav, you will use <strong><em>m</em></strong> for margin or <strong><em>p</em></strong> for
-                      padding. Then you can add a position where you want your spacing , ie..<strong><em>s</em></strong> for start.
-                      There are WAAAY to many options to list, so here's a <a
-                        href="https://getbootstrap.com/docs/5.3/utilities/spacing/">link</a> 😉.
-                    </p>
-                    <h4>Navbar Hamburger(togglers)</h4>
-                    <p>
-                      You will notice you resize your page with a navbar, that the navbar items automatically stack. You can prevent the
-                      by adding a hamburger button that displays when the screen size reaches a certain size. You can grab the code <a
-                        href="https://getbootstrap.com/docs/5.3/components/navbar/#toggler">here</a> which is <em>
-                        < button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
-                          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                          <span class="navbar-toggler-icon"></span>
-                          < /button>
-                      </em>. Create a div with class="collapse navbar-collapse" and give it id="navbarTogglerDemo02". you can name your
-                      id whatever you like, it just has to match with what is in the button code for its target. </p>
-                    <p>
-                      div placement does matter as you only want the things in the div that you want to be collapsable. So if you want
-                      your brand to be outside of the hamburger after everything is collapsed then you would want to not include your
-                      navbar-brand inside your div. In order to get your hamburger to function in a web browser you will need the
-                      javascript script provided in <strong><em><a href="https://getbootstrap.com/docs/5.3/getting-started/download">Get
-                            Started</a></em></strong>.
-                    </p>
-                    <h4> The Grid System</h4>
-                    <p>
-                      You create grids using div class="row" and div class="col". Onces you have your rows and collums, you can get more
-                      specific about the placement while static or responsive. Bootstrap has a prespecified alottment of 12 collums.
-                      Using col-1 thru 12 will allow you to chose how many of the 12 chunk each col takes up. You make your colums
-                      responsive, how it reacts at different sizes, using size tags. col(standard) col-sm(mobile) col-md(tablet)
-                      col-lg(laptop/desktop) and col-xl- col-xxl for things over 1440. You add multiple of these "classes" in with your
-                      div class="col-lg-4 col-md-6 col-sm-12". For anything you're wanting to take up the full 12, you do not have to
-                      specify it as it is defaulted.
-                    </p>
-                
-                    <h4>Bootstrap Containers</h4>
-                    <p>
-                      Containers allow you to "chunk" off different portions of your code, and you create them using
-                      <strong><em>class="container"</em></strong> These containers are automatically responsive, so as you change the
-                      size of your browser or viewing window, the container will automatically resize itself and jump between sizes.
-                      While effective, this is not pretty at all so you can also use <strong><em>class="container-fluid"</em></strong>
-                      in order to get rid of the jumpyness and make it a smooth transition.
-                    </p>
-                
-                    <hr>
-                    
-                    <hr>
-                
-                    <h4>Bootstrap Carousels</h4>
-                    <p>
-                      The Bootstrap Carousel is basically like a slideshow, that you can code to play contantly or click next/prev and
-                      things of that nature. Carousels are created using multiple divs. div id="carouselExample" class="carousel slide".
-                      Carousels must have another div with class="carousel-inner" as well as div class="carousel-item", the first
-                      carousel-item must also have the class "active" after class="carousel-item active". Base code to create the
-                      buttons Can be found within this playbook code and is currently commented out.
-                
-                      <!--<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="./images/favicon.ico">
+
+
+</head>
+
+<body>
+  <div class="bootstrap-info">
+    <h1>Bootstrap</h1>
+    <p>
+      <em>A Front-End Library</em>, bootstrap is a precompiled library of styles that can essentially be shortcutted to
+      style your webpage. Bootstrap and its documentation can be found <a href="https://getbootstrap.com/">here</a>.
+    </p>
+
+    <h3>Bootstrap Installation</h3>
+    <p>
+      When you want to use the bootstrap framework, there are a few different ways that you can install it. You can just
+      use the href link provided in the <strong><em><a
+            href="https://getbootstrap.com/docs/5.3/getting-started/download">Get Started</a></em></strong>, you can
+      download and include it in your package manager, or you can download the physical files to point to. The easiest
+      option is to just use the href link, which is most likely cached on the user's systems already.
+    </p>
+    <h3>Workflow</h3>
+    <p>
+      One of the first things you should when you start designing a website is to start
+      <strong><em>wireframing</em></strong>. This is just a low res quick sketch of what you're going to want your site
+      to look like. You can do this just on a sheet of paper, or download and print templates from <a
+        href="https://sneakpeekit.com">Sneakpeekit</a> or use an interactive too called <a
+        href="https://balsamiq.cloud">Balsamiq</a>. After you wireframe your site and establish a design you're going to
+      create a <strong><em>Mock Up</em></strong>, this is a more detailed and styled nonfunctioning wireframe of your
+      site. You can do this with photoshop, illustrator or any other photo editing software.
+    </p>
+    <h3>Creating a Navigation Bar</h3>
+    <p>
+      You can create a navigation bar in bootstrap using the < nav> tag and creating a navbar class, class="navbar".
+        Then create and unordered list with a class="navbar-nav" and list items with a class="nav-item". You would then
+        want to create an anchor tag with a class="nav-link" href="" and name your tag with whatever you want it to say
+        or to point to. You can also use a class="navbar-brand" href="" anchor tag and this will create a "brand" style.
+        It can be created with multiple elements but it works best with the anchor tag.
+    </p>
+    <h4>Navbar Content Positioning</h4>
+    <p>
+      You change the positioning of your li by adding in spacing. Inside of your opening ul, you want to add an addition
+      class after navbar-nav, you will use <strong><em>m</em></strong> for margin or <strong><em>p</em></strong> for
+      padding. Then you can add a position where you want your spacing , ie..<strong><em>s</em></strong> for start.
+      There are WAAAY to many options to list, so here's a <a
+        href="https://getbootstrap.com/docs/5.3/utilities/spacing/">link</a> 😉.
+    </p>
+    <h4>Navbar Hamburger(togglers)</h4>
+    <p>
+      You will notice you resize your page with a navbar, that the navbar items automatically stack. You can prevent the
+      by adding a hamburger button that displays when the screen size reaches a certain size. You can grab the code <a
+        href="https://getbootstrap.com/docs/5.3/components/navbar/#toggler">here</a> which is <em>
+        < button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          < /button>
+      </em>. Create a div with class="collapse navbar-collapse" and give it id="navbarTogglerDemo02". you can name your
+      id whatever you like, it just has to match with what is in the button code for its target. </p>
+    <p>
+      div placement does matter as you only want the things in the div that you want to be collapsable. So if you want
+      your brand to be outside of the hamburger after everything is collapsed then you would want to not include your
+      navbar-brand inside your div. In order to get your hamburger to function in a web browser you will need the
+      javascript script provided in <strong><em><a href="https://getbootstrap.com/docs/5.3/getting-started/download">Get
+            Started</a></em></strong>.
+    </p>
+    <h4> The Grid System</h4>
+    <p>
+      You create grids using div class="row" and div class="col". Onces you have your rows and collums, you can get more
+      specific about the placement while static or responsive. Bootstrap has a prespecified alottment of 12 collums.
+      Using col-1 thru 12 will allow you to chose how many of the 12 chunk each col takes up. You make your colums
+      responsive, how it reacts at different sizes, using size tags. col(standard) col-sm(mobile) col-md(tablet)
+      col-lg(laptop/desktop) and col-xl- col-xxl for things over 1440. You add multiple of these "classes" in with your
+      div class="col-lg-4 col-md-6 col-sm-12". For anything you're wanting to take up the full 12, you do not have to
+      specify it as it is defaulted.
+    </p>
+
+    <h4>Bootstrap Containers</h4>
+    <p>
+      Containers allow you to "chunk" off different portions of your code, and you create them using
+      <strong><em>class="container"</em></strong> These containers are automatically responsive, so as you change the
+      size of your browser or viewing window, the container will automatically resize itself and jump between sizes.
+      While effective, this is not pretty at all so you can also use <strong><em>class="container-fluid"</em></strong>
+      in order to get rid of the jumpyness and make it a smooth transition.
+    </p>
+
+    <hr>
+
+    <hr>
+
+    <h4>Bootstrap Carousels</h4>
+    <p>
+      The Bootstrap Carousel is basically like a slideshow, that you can code to play contantly or click next/prev and
+      things of that nature. Carousels are created using multiple divs. div id="carouselExample" class="carousel slide".
+      Carousels must have another div with class="carousel-inner" as well as div class="carousel-item", the first
+      carousel-item must also have the class "active" after class="carousel-item active". Base code to create the
+      buttons Can be found within this playbook code and is currently commented out.
+
+      <!--<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                   </button>
@@ -104,75 +110,76 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                   </button> -->
-                    </p>
-                
-                    <h4>Bootstrap Cards</h4>
-                    <p>
-                      Cards are smaller containers styled within the page that can have a header, body and foot. You build the card
-                      using a div class="card" style="width: ;". You can add an image at the top using an img tage with
-                      class="card-img-top". This should be placed under the initial card class and directly above the the div
-                      class="card-body". You add text within the card-body div using p class="card-text". Everything should be nested
-                      properly within the first div. Cards can be used in conjunction with BS grid system to allow for responsive
-                      functionality.
-                
-                    </p>
-                
-                    <h4>CSS Z-Index and Stacking Order</h4>
-                    <p>
-                      CSS has, along with x and y, a z axis that allows you to stack elements on top of one another, iving you the
-                      ability to "hide" elements behind others. Use z-index inside you CSS styling and give it and give it a possition.
-                      default position is 0, and anything above or below will be either above or below that default 0. You can go into
-                      the negative z-space as well but in most cases it will no longer be visable. Z-index items must be possitioned in
-                      order for it to work. At least 1 element must have a z-index greater than 1 to start stacking, but it is best to
-                      possition both, or as many as needed, to achieve the most customizable outcome.
-                
-                    </p>
-                
-                    <h4>Media Query Breakpoints</h4>
-                    <p>
-                      <strong><em>Media @ media < type>
-                            < feature></strong></em> <br>
-                      Media Query Breakpoints can be used as "IF" statements to a certain degree. Basically if you want a certain
-                      element on your website to change or do something specific once the browser hits a certain size, or when your site
-                      is printed, you can use @ media (max-width:992px) { Then select the element that you want to target { and tell it
-                      what you want it to do} You can also add multiple elements {to do what the query is instructing} }
-                
-                    </p>
-                
-                    <h4>Code Refactoring</h4>
-                    <p>
-                      Code refactoring is basically cleaning up you code so you are not repeating the same lines of code for different
-                      elements. For each element that has the same CSS styling, add a new class, that will be the same, to your HTML
-                      elements and then target that class in your CSS stylesheet. So anything that has the same color pallet could be in
-                      a class="color-section" so you wouldn't have to have the same bits of code repeated. Now if you have the
-                      class="color-section" on an element that is not going to be styled the same, styling it within the CSS will
-                      override it.
-                    </p>
-                    <h4>Combining Selectors</h4>
-                    <p>
-                      You can combine selectors in a few different ways. You can just add then in a line seperated by a comma, so h1,
-                      h2, h3, h4, h5, h6 and each of these selectors with have whatever style you give it. or you can use hieratchical
-                      selectors. There are two types of hierarchical selectors, ones with a space and one without. hierarchical
-                      selectors that have spaces are read right to left. Basically saying for this child WITHIN this parent do X, for
-                      example| # title .container-fluid {
-                      padding: 3% 15% 7%;
-                      text-align: left;
-                      }
-                      This first looks for the .container-fluid AND IF its WITHIN the # title parent, give it padding and align its text
-                      accordingly.<br>
-                      Ones without a space are read from left to right and will look for through the HTML for an element that has the
-                      class title AND the class container-fluid. # title.container-fluid {
-                      padding: 3% 15% 7%;
-                      text-align: left;
-                      } and will only apply the CSS if all conditions are met.
-                  </div>
-                
-              
-            </body>
-            <footer>
-                <a href="./playbook.html">Home</a><a href="./html.html">HTML</HTML></a> <a href="./css.html">CSS</a> <a href="./js.html">Javascript</a>
+    </p>
 
-            </footer>
-        </html>
+    <h4>Bootstrap Cards</h4>
+    <p>
+      Cards are smaller containers styled within the page that can have a header, body and foot. You build the card
+      using a div class="card" style="width: ;". You can add an image at the top using an img tage with
+      class="card-img-top". This should be placed under the initial card class and directly above the the div
+      class="card-body". You add text within the card-body div using p class="card-text". Everything should be nested
+      properly within the first div. Cards can be used in conjunction with BS grid system to allow for responsive
+      functionality.
+
+    </p>
+
+    <h4>CSS Z-Index and Stacking Order</h4>
+    <p>
+      CSS has, along with x and y, a z axis that allows you to stack elements on top of one another, iving you the
+      ability to "hide" elements behind others. Use z-index inside you CSS styling and give it and give it a possition.
+      default position is 0, and anything above or below will be either above or below that default 0. You can go into
+      the negative z-space as well but in most cases it will no longer be visable. Z-index items must be possitioned in
+      order for it to work. At least 1 element must have a z-index greater than 1 to start stacking, but it is best to
+      possition both, or as many as needed, to achieve the most customizable outcome.
+
+    </p>
+
+    <h4>Media Query Breakpoints</h4>
+    <p>
+      <strong><em>Media @ media < type>
+            < feature></strong></em> <br>
+      Media Query Breakpoints can be used as "IF" statements to a certain degree. Basically if you want a certain
+      element on your website to change or do something specific once the browser hits a certain size, or when your site
+      is printed, you can use @ media (max-width:992px) { Then select the element that you want to target { and tell it
+      what you want it to do} You can also add multiple elements {to do what the query is instructing} }
+
+    </p>
+
+    <h4>Code Refactoring</h4>
+    <p>
+      Code refactoring is basically cleaning up you code so you are not repeating the same lines of code for different
+      elements. For each element that has the same CSS styling, add a new class, that will be the same, to your HTML
+      elements and then target that class in your CSS stylesheet. So anything that has the same color pallet could be in
+      a class="color-section" so you wouldn't have to have the same bits of code repeated. Now if you have the
+      class="color-section" on an element that is not going to be styled the same, styling it within the CSS will
+      override it.
+    </p>
+    <h4>Combining Selectors</h4>
+    <p>
+      You can combine selectors in a few different ways. You can just add then in a line seperated by a comma, so h1,
+      h2, h3, h4, h5, h6 and each of these selectors with have whatever style you give it. or you can use hieratchical
+      selectors. There are two types of hierarchical selectors, ones with a space and one without. hierarchical
+      selectors that have spaces are read right to left. Basically saying for this child WITHIN this parent do X, for
+      example| # title .container-fluid {
+      padding: 3% 15% 7%;
+      text-align: left;
+      }
+      This first looks for the .container-fluid AND IF its WITHIN the # title parent, give it padding and align its text
+      accordingly.<br>
+      Ones without a space are read from left to right and will look for through the HTML for an element that has the
+      class title AND the class container-fluid. # title.container-fluid {
+      padding: 3% 15% 7%;
+      text-align: left;
+      } and will only apply the CSS if all conditions are met.
+  </div>
 
 
+</body>
+<footer>
+  <a href="./index.html">Home</a><a href="./html.html">HTML
+
+</HTML></a> <a href="./css.html">CSS</a> <a href="./js.html">Javascript</a>
+
+</footer>
+
+</html>

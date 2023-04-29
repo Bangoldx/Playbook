@@ -1,24 +1,30 @@
-<!DOCTYPE html>  
-          <html lang="en">
-            <head>
-              <meta charset="UTF-8">
-              <title>My Website</title>
-            </head>
-            <body>
-                <div id="css-info">
-                    <h1>CSS</h1>
-                    <strong>Cascading Style Sheets</strong> ~ You can change the style of your webpage by using CSS. <br>
-                    Backgrounds, can be changed using the style tag, <br>
-                    <code> style="background-color:red;"</code>
-                    <br>
-                    If you want something to be styled over the entire project, you can create a style and /style> entry within the
-                    head below the title portion of your HMTL code. Within the style block of code you can designate what
-                    elements of the code you want to adjust with out have to go through each individual instance of that
-                    element. Such as body, hr, etc. Each element you want to style has to be coded seperate but will effect
-                    all instances within the file. This is called <strong>internal CSS</strong> and
-                    They are written as such:<br><br>
-                
-                    <pre>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSS</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="./images/favicon.ico">
+
+
+</head>
+
+<body>
+  <div id="css-info">
+    <h1>CSS</h1>
+    <strong>Cascading Style Sheets</strong> ~ You can change the style of your webpage by using CSS. <br>
+    Backgrounds, can be changed using the style tag, <br>
+    <code> style="background-color:red;"</code>
+    <br>
+    If you want something to be styled over the entire project, you can create a style and /style> entry within the
+    head below the title portion of your HMTL code. Within the style block of code you can designate what
+    elements of the code you want to adjust with out have to go through each individual instance of that
+    element. Such as body, hr, etc. Each element you want to style has to be coded seperate but will effect
+    all instances within the file. This is called <strong>internal CSS</strong> and
+    They are written as such:<br><br>
+
+    <pre>
                               body { background-color:red;
                               }
                 
@@ -27,227 +33,229 @@
                               height: 2px;
                               }
                               </pre>
-                    <br>
-                    <br>
-                    <strong>External CSS</strong> Allows you to bring in a stylesheet from a .CSS file into your HMTL file.
-                    Use the <code>link</code> tag to link your css to your html. Do this by <code>link rel="stylesheet"
-                                  href="*file location*"</code>. In the external CSS file you can create css stylings for any element
-                    you have
-                    through your entire HTML project. Just make sure you place the < link> tag in your < head> under your
-                        < title>.
-                
-                          <p>
-                            <hr>
-                            
-                            <hr>
-                          </p>
-                
-                          <h1>CSS Priority</h1>
-                
-                          <p>
-                            When using CSS, it is possible to bug your code by having CSS code in multiple place. CSS code
-                            priority is:
-                          </p>
-                
-                          <p>
-                          <ol>
-                            <li><strong>Inline CSS</strong>-<em>CSS code within the element itself.</em></li>
-                            <li><strong>Internal CSS</strong>-<em>CSS code written for an element inside a < style> tag
-                                  inside the < head></em></li>
-                            <li><strong>External CSS</strong>-<em>Your seperate CSS style file. Linked to your HTML files
-                                using < link rel="stylesheet" href="filelocation > under the < title > portion of the HTML < head >"
-                                  </em>
-                            </li>
-                          </ol>
-                          </p>
-                
-                          <p>
-                            In <strong>external</strong> CSS files, more specific instructions get priority over less
-                            specific instructions. Classes and IDs will override standard tags in styling giving you more
-                            options to style your site.
-                          </p>
-                
-                          <p>
-                            As a best practice when coding with CSS is it is best to do all your CSS styling in an
-                            external .CSS file.
-                          </p>
-                
-                          <h1>CSS Syntax</h1>
-                
-                          selector(who){property(what):value(how);}
-                
-                          <br>
-                
-                          <p>
-                            The <em>selector</em> is going to be your element or <strong>class</strong>. Your property is
-                            what you're changing, such as your color, background, borders and more. Your Value, or how, is
-                            going to determine in what way you are changing the property of your selector. CSS Values must
-                            be opened with ":" and closed with ";"</p>
-                
-                          <h3>Class <em>Selectors</em></h3>
-                
-                          <p><strong>Classes</strong> help making individual parts of the code styled. Adding (class="x")
-                            after your element name effectively create a sub element. You access them in CSS by adding a
-                            full stop "."before the class name. This allows you to modify just the class instead of the
-                            entire element. You're going to use this tag when grouping related items. You can have
-                            multiple classes for a particular elemement. i.e. < img class="broccoli circular"> will create
-                              the style for the classes "broccoli" as well as the class "circular".
-                          </p>
-                
-                          <h3>ID Selectors</h3>
-                
-                          <p>
-                            IDs are created within the opening tag with " id="heading". These are called in your CSS file
-                            using the "#" symbol.
-                          </p>
-                
-                          <p>
-                            Use to identify where there is only a single instance and use it when you want to create a
-                            specific style for a single item.
-                            Any given ID can only be used once, the system will not allow a second instance of this ID,
-                            you will have to create a different ID in order to continue. You can not have more that one ID
-                            for a single element. IDs are more selectively used in the wild.
-                          </p>
-                
-                          <h3>Pseudo Selectors</h3>
-                
-                          <p>
-                            Pseudo selectors have a ":", CSS elements can have different states, ie img:hover
-                            {background-color:gold;} would cause the background of an image that the mouse is hovering
-                            over to change color.
-                          </p>
-                          <hr>
-                
-                          <h1>Favicons</h1>
-                          <p>
-                            Favorite icon, what shows up in the left side of the tab. Can be created at favicon.cc, Use < link> with a
-                              rel="icon" and a href="favicon.ico". If your browser still does not show your
-                              favicon, change the href to href="favicon.ico?v=2"
-                          </p>
-                          <hr>
-                          <h1>HMTL DIVs</h1>
-                          <p>
-                            <em>a content division element</em>
-                            < div> Allows you to divide you content in to seperate containers or boxs and style them
-                              seperatly. Must be opened and closed.<br>
-                              You can use CSS to alter the sizes of margins for any element.
-                              <p>
-                                <hr>
-                              <h1>The Box Model & Box Model Styling</h1>
-                              <p>
-                                Cirlce shorthand=Top,Right,Bottom,Left
-                              </p>
-                              <p>
-                                This is very useful when creating a box with different sized borders, padding, and
-                                margins. You may also specify a side with margin-top: Xpx; padding-right: Xpx;
-                                border-bottom:<em>solid</em> Xpx; margin-left: Xpx;, or any variation of element modifiers
-                                you're looking to use.
-                              </p>
-                              <div class="top-container">
-                              </div>
-                              <div class="middle-container">
-                              </div>
-                              <div class="bottom-container">
-                              </div>
-                              <p>
-                                CodePen is not allowing the style to show properly, but if you look in the CSS section of
-                                the code, the code is correct. Please reference it.😄
-                              </p>
-                              <h1> CSS Display Properties</h1>
-                              <p>
-                              <h3>
-                                <ul>
-                                  <li>Block</li>
-                                  <li>Inline</li>
-                                  <li>Inline-Block</li>
-                                  <li>None</li>
-                                </ul>
-                              </h3>
-                              <p>You can change the display property of any given element using the "display: (property)"
-                              </p>
-                
-                              <p>
-                                <strong>Block</strong> elements take up the whole space on the screen, preventing any
-                                other elements from sitting next to it. We have seen block elements already, such as:
-                                Paragraphs (< p>), Headers (< h1 through h6>), Divisions (< div>), list and list items (< ol>, < ul>,
-                                          and < li>), and Forms (< form>).
-                              </p>
-                              <p>
-                                <strong>Inline</strong> (display:inline;) elements are those that can be placed side by
-                                side on the same line. Like < span> (opened and closed) which allows you to create a box
-                                  within a box for specific styling. < Span>s can be nested withing other elements or
-                                    created seperate.
-                              </p>
-                              <p>
-                                <strong>Inline-Block</strong> (display:inline-block;) allows you to still have multiple
-                                blocks inline but be able to adujst the width of the elememnt.
-                              </p>
-                              <p>
-                                <strong>None</strong> allows you to basically hide something. It will remove its
-                                visibility from the screen as well remove its width. Effectively deleting it. You may also
-                                use the <em>visibility: hidden;</em> CSS style to remove it from the screen but keep its
-                                box, which may be useful depending on what you're trying to do.
-                              </p>
-                
-                              <h1>CSS Positioning</h1>
-                              <p>
-                              <ol>
-                                <li>Content is everything</li>
-                                <li>Order comes from code</li>
-                                <li>Children sit on top of parents</li>
-                              </ol>
-                              You can also change the position properties, <strong>Static</strong> is the default position
-                              proprty. <strong>Relative</strong> allows you to change the position relative to where the
-                              default position used to be. Cordinate properties T,B,L,R,. This does not change positions
-                              of any other elements on the screen. <strong> Absolute</strong> allows you to adjust
-                              position base on the "parent" element such as the < div>. <strong>Fixed</strong> allows you
-                                to position something in a permanent position that will allow you to scroll and keep the
-                                fixed element where it is, depsite all the scrolling.
-                          </p>
-                          <h3>Text Allignment</h3>
-                          <p>
-                            You can use < text-align:"";> to align you text. < text-align:center;> will center everything
-                                within the parent element as long as the elements that it is affecting has a full body
-                                width. If you do have a block element that has a specified width, you can have that align
-                                how you want it using margin:auto; or any variation of circle shorthand that you would
-                                need.
-                          </p>
-                          <h1>Font Styling</h1>
-                          <p>
-                            Two major font families, serif and sans-serif. you can broadly difine whtere you want a serif
-                            or sans-serif type face within the code, use font-familty:""; you can find a list of websafe
-                            fonts at cssfontstack.com, if you dont want to have to worry about font safe formatting, you
-                            use font embedding, go to <a href="font.google.com">Google Fonts</a>. From here you can choose
-                            the fonts you want and embed into your code using the < link> code provided. You add this in
-                              your head at the bottom. You then choose it as a font-family:""; inside the element in your
-                              CSS code. You can also "font fallbacks". This basically specifies that you want font-family:
-                              "Times New Roman", Times, serif; From left to right, the first is the first option and the
-                              last is the last option.
-                          </p>
-                
-                          <h3>Font-Sizing</h3>
-                          <p>
-                            You can change the font sizing but using the font-size:""; code inside you CSS. Now, you can
-                            adjust this as a <strong>Static</strong> element by specifying a pixel amount, you can also
-                            adjust this as a <strong>Dynamic</strong> element. You do this by specifying a percentage, or
-                            an em, which is the phonetic pronounciation of the letter "M". So basically em is the height
-                            of a capital M, which is 16 pixels. So 2 em = 32px 5.625em = 90px. rem or "root"em allows you
-                            adjust the font property and ignore any inherited.
-                
-                
-                            <hr>
-                            
-                            <hr>
-                          <h1>Float and Clear</h1>
-                          <p>
-                            <strong>float</strong> used with an image will allow any text to wrap around the image instead
-                            of being blocked off to a particular side. In CSS use float: "direction"; in which the
-                            direction is which side you want the image to be on. <strong>Clear</strong> allows you to
-                            clear a side of whatever element you use it with to "clear" that side of anything text.
-                          </p>
-                  </div>
-                
-              
-            </body>
-        </html>
+    <br>
+    <br>
+    <strong>External CSS</strong> Allows you to bring in a stylesheet from a .CSS file into your HMTL file.
+    Use the <code>link</code> tag to link your css to your html. Do this by <code>link rel="stylesheet"
+                                  href="*file location*"</code>. In the external CSS file you can create css stylings
+    for any element
+    you have
+    through your entire HTML project. Just make sure you place the < link> tag in your < head> under your
+        < title>.
 
+          <p>
+            <hr>
+
+            <hr>
+          </p>
+
+          <h1>CSS Priority</h1>
+
+          <p>
+            When using CSS, it is possible to bug your code by having CSS code in multiple place. CSS code
+            priority is:
+          </p>
+
+          <p>
+          <ol>
+            <li><strong>Inline CSS</strong>-<em>CSS code within the element itself.</em></li>
+            <li><strong>Internal CSS</strong>-<em>CSS code written for an element inside a < style> tag
+                  inside the < head></em></li>
+            <li><strong>External CSS</strong>-<em>Your seperate CSS style file. Linked to your HTML files
+                using < link rel="stylesheet" href="filelocation > under the < title > portion of the HTML < head >"
+                  </em>
+            </li>
+          </ol>
+          </p>
+
+          <p>
+            In <strong>external</strong> CSS files, more specific instructions get priority over less
+            specific instructions. Classes and IDs will override standard tags in styling giving you more
+            options to style your site.
+          </p>
+
+          <p>
+            As a best practice when coding with CSS is it is best to do all your CSS styling in an
+            external .CSS file.
+          </p>
+
+          <h1>CSS Syntax</h1>
+
+          selector(who){property(what):value(how);}
+
+          <br>
+
+          <p>
+            The <em>selector</em> is going to be your element or <strong>class</strong>. Your property is
+            what you're changing, such as your color, background, borders and more. Your Value, or how, is
+            going to determine in what way you are changing the property of your selector. CSS Values must
+            be opened with ":" and closed with ";"</p>
+
+          <h3>Class <em>Selectors</em></h3>
+
+          <p><strong>Classes</strong> help making individual parts of the code styled. Adding (class="x")
+            after your element name effectively create a sub element. You access them in CSS by adding a
+            full stop "."before the class name. This allows you to modify just the class instead of the
+            entire element. You're going to use this tag when grouping related items. You can have
+            multiple classes for a particular elemement. i.e. < img class="broccoli circular"> will create
+              the style for the classes "broccoli" as well as the class "circular".
+          </p>
+
+          <h3>ID Selectors</h3>
+
+          <p>
+            IDs are created within the opening tag with " id="heading". These are called in your CSS file
+            using the "#" symbol.
+          </p>
+
+          <p>
+            Use to identify where there is only a single instance and use it when you want to create a
+            specific style for a single item.
+            Any given ID can only be used once, the system will not allow a second instance of this ID,
+            you will have to create a different ID in order to continue. You can not have more that one ID
+            for a single element. IDs are more selectively used in the wild.
+          </p>
+
+          <h3>Pseudo Selectors</h3>
+
+          <p>
+            Pseudo selectors have a ":", CSS elements can have different states, ie img:hover
+            {background-color:gold;} would cause the background of an image that the mouse is hovering
+            over to change color.
+          </p>
+          <hr>
+
+          <h1>Favicons</h1>
+          <p>
+            Favorite icon, what shows up in the left side of the tab. Can be created at favicon.cc, Use < link> with a
+              rel="icon" and a href="favicon.ico". If your browser still does not show your
+              favicon, change the href to href="favicon.ico?v=2"
+          </p>
+          <hr>
+          <h1>HMTL DIVs</h1>
+          <p>
+            <em>a content division element</em>
+            < div> Allows you to divide you content in to seperate containers or boxs and style them
+              seperatly. Must be opened and closed.<br>
+              You can use CSS to alter the sizes of margins for any element.
+              <p>
+                <hr>
+              <h1>The Box Model & Box Model Styling</h1>
+              <p>
+                Cirlce shorthand=Top,Right,Bottom,Left
+              </p>
+              <p>
+                This is very useful when creating a box with different sized borders, padding, and
+                margins. You may also specify a side with margin-top: Xpx; padding-right: Xpx;
+                border-bottom:<em>solid</em> Xpx; margin-left: Xpx;, or any variation of element modifiers
+                you're looking to use.
+              </p>
+              <div class="top-container">
+              </div>
+              <div class="middle-container">
+              </div>
+              <div class="bottom-container">
+              </div>
+              <p>
+                CodePen is not allowing the style to show properly, but if you look in the CSS section of
+                the code, the code is correct. Please reference it.😄
+              </p>
+              <h1> CSS Display Properties</h1>
+              <p>
+              <h3>
+                <ul>
+                  <li>Block</li>
+                  <li>Inline</li>
+                  <li>Inline-Block</li>
+                  <li>None</li>
+                </ul>
+              </h3>
+              <p>You can change the display property of any given element using the "display: (property)"
+              </p>
+
+              <p>
+                <strong>Block</strong> elements take up the whole space on the screen, preventing any
+                other elements from sitting next to it. We have seen block elements already, such as:
+                Paragraphs (< p>), Headers (< h1 through h6>), Divisions (< div>), list and list items (< ol>, < ul>,
+                          and < li>), and Forms (< form>).
+              </p>
+              <p>
+                <strong>Inline</strong> (display:inline;) elements are those that can be placed side by
+                side on the same line. Like < span> (opened and closed) which allows you to create a box
+                  within a box for specific styling. < Span>s can be nested withing other elements or
+                    created seperate.
+              </p>
+              <p>
+                <strong>Inline-Block</strong> (display:inline-block;) allows you to still have multiple
+                blocks inline but be able to adujst the width of the elememnt.
+              </p>
+              <p>
+                <strong>None</strong> allows you to basically hide something. It will remove its
+                visibility from the screen as well remove its width. Effectively deleting it. You may also
+                use the <em>visibility: hidden;</em> CSS style to remove it from the screen but keep its
+                box, which may be useful depending on what you're trying to do.
+              </p>
+
+              <h1>CSS Positioning</h1>
+              <p>
+              <ol>
+                <li>Content is everything</li>
+                <li>Order comes from code</li>
+                <li>Children sit on top of parents</li>
+              </ol>
+              You can also change the position properties, <strong>Static</strong> is the default position
+              proprty. <strong>Relative</strong> allows you to change the position relative to where the
+              default position used to be. Cordinate properties T,B,L,R,. This does not change positions
+              of any other elements on the screen. <strong> Absolute</strong> allows you to adjust
+              position base on the "parent" element such as the < div>. <strong>Fixed</strong> allows you
+                to position something in a permanent position that will allow you to scroll and keep the
+                fixed element where it is, depsite all the scrolling.
+          </p>
+          <h3>Text Allignment</h3>
+          <p>
+            You can use < text-align:"";> to align you text. < text-align:center;> will center everything
+                within the parent element as long as the elements that it is affecting has a full body
+                width. If you do have a block element that has a specified width, you can have that align
+                how you want it using margin:auto; or any variation of circle shorthand that you would
+                need.
+          </p>
+          <h1>Font Styling</h1>
+          <p>
+            Two major font families, serif and sans-serif. you can broadly difine whtere you want a serif
+            or sans-serif type face within the code, use font-familty:""; you can find a list of websafe
+            fonts at cssfontstack.com, if you dont want to have to worry about font safe formatting, you
+            use font embedding, go to <a href="font.google.com">Google Fonts</a>. From here you can choose
+            the fonts you want and embed into your code using the < link> code provided. You add this in
+              your head at the bottom. You then choose it as a font-family:""; inside the element in your
+              CSS code. You can also "font fallbacks". This basically specifies that you want font-family:
+              "Times New Roman", Times, serif; From left to right, the first is the first option and the
+              last is the last option.
+          </p>
+
+          <h3>Font-Sizing</h3>
+          <p>
+            You can change the font sizing but using the font-size:""; code inside you CSS. Now, you can
+            adjust this as a <strong>Static</strong> element by specifying a pixel amount, you can also
+            adjust this as a <strong>Dynamic</strong> element. You do this by specifying a percentage, or
+            an em, which is the phonetic pronounciation of the letter "M". So basically em is the height
+            of a capital M, which is 16 pixels. So 2 em = 32px 5.625em = 90px. rem or "root"em allows you
+            adjust the font property and ignore any inherited.
+
+
+            <hr>
+
+            <hr>
+          <h1>Float and Clear</h1>
+          <p>
+            <strong>float</strong> used with an image will allow any text to wrap around the image instead
+            of being blocked off to a particular side. In CSS use float: "direction"; in which the
+            direction is which side you want the image to be on. <strong>Clear</strong> allows you to
+            clear a side of whatever element you use it with to "clear" that side of anything text.
+          </p>
+  </div>
+
+
+</body>
+<footer> <a href="index.html">Home</a>
+
+</html>
